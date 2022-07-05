@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+
+  feature-engineering-example:
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - type: bind
+        source: ./output
+        target: /workspace/output
+    env_file: .env
